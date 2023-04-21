@@ -1,0 +1,7 @@
+to add Modules to the Config
+
+1. goto the Voidware Custom Modules and Copy all the files
+2. Paste it into the CustomModules folder
+there u have it
+
+Make sure to read the README file:) 

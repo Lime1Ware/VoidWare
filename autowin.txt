@@ -1,0 +1,52 @@
+local AutoWin = {["Enabled"] = false}
+	AutoWin = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "5v5 AutoWin",
+		["HoverText"] = "Fixed autowin built for 5v5. MAKE SURE TO TOGGLE THIS OFF WHEN TOGGLED ON",
+		["Function"] = function(callback)
+			if callback then
+				createwarning("AutoWin", "Autowin toggled. Please by patient, the autowin should start within 2 minutes due to the bed shield.", 6)
+				wait(3)
+				createwarning("AutoWin Warning", "IMMEDIATLY TOGGLE THIS OFF TO PREVENT CORRUPTION TO THE CURRENT CONFIG. The autowin will still run.", 6)
+				wait(120)
+game:GetService("ReplicatedStorage").rbxts_include.node_modules:FindFirstChild("@rbxts").net.out._NetManaged.pgcaqAiIjpSklcQiatjhivnupORhdhkcqkochXbn:FireServer()
+wait(5.34)
+local v1 = game.Players.LocalPlayer.Character
+						if matchState == 0 then repeat task.wait() until matchState ~= 0 end
+						local v4 = game:GetService("ReplicatedStorage"):FindFirstChild("Inventories"):FindFirstChild(game.Players.LocalPlayer.Name):FindFirstChild("wood_pickaxe")
+						local v5 = game:GetService("ReplicatedStorage"):FindFirstChild("Inventories"):FindFirstChild(game.Players.LocalPlayer.Name):FindFirstChild("wood_sword")
+						local v6 = game.Players.LocalPlayer.Character;
+						local v7 = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart");
+						local bed
+						for i2,v8 in pairs(workspace:GetChildren()) do
+							if v8.Name == "bed" then
+								if v8.Covers.BrickColor ~= game.Players.LocalPlayer.Team.TeamColor then
+									game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v8.CFrame
+									task.wait(.1)
+									game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v8.CFrame
+									task.wait(.1)
+									game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v8.CFrame + Vector3.new(0, 7, 0)
+									game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v8.CFrame + Vector3.new(0, 7, 0)
+									game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = v8.CFrame + Vector3.new(0, 7, 0)
+									local v9 = game.Players.LocalPlayer.Character;
+									repeat task.wait() until v8 == nil or v8.Parent == nil
+									bed = nil
+								end
+							end
+						end
+						repeat task.wait() until bed == nil
+						for i3,v10 in pairs(game.Players:GetPlayers()) do
+							if v10.Character and v10.Character:FindFirstChild("HumanoidRootPart") then
+								if v10.Team ~= game.Players.LocalPlayer.Team then
+									while v10 and v10.Character.Humanoid.Health > 0 and v10.Character.PrimaryPart do
+										task.wait(.2)
+										if game.Players.LocalPlayer.Character ~= nil and game.Players.LocalPlayer.Character:FindFirstChild'HumanoidRootPart' then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v10.Character.HumanoidRootPart.CFrame end
+										workspace.Gravity = 192
+										
+									end
+								end
+							end
+						end
+						AutoWin["ToggleButton"](false)
+			end
+		end
+	})
